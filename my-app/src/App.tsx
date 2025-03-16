@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import viteLogo from './assets/vite.svg';
 import reactLogo from './assets/react.svg';
-import Create from './components/Create'; // Adjust the path as necessary
-import Home from './components/Home'; // Adjust the path as necessary
-import Read from './components/Read'; // Add this import
-import Update from './components/Update'; // Add this import
+import Create from './components/Create'; 
+import Home from './components/Home'; 
+import Read from './components/Read'; 
+import Update from './components/Update'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
