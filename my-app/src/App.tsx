@@ -23,7 +23,7 @@ function App() {
         <Route path="/posts" element={<PostsList />} />
         <Route path="/posts/:id" element={<PostsList />} />
         <Route path="/create-post" element={<CreatePost />} />
-        <Route path="/post/:id" element={<PostDetail />} />
+        {/* <Route path="/post/:id" element={<PostDetail />} /> */}
         <Route path="/update-post/:id" element={<UpdatePost />} />
       </Routes>
     </BrowserRouter>
