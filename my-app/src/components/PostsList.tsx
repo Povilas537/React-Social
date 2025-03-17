@@ -12,6 +12,18 @@ const PostsList = () => {
       .catch((err) => console.error(err));
   }, []);
 
+  const handleDelete = (id: number) => {
+    const confirm = window.confirm('Are you sure you want to delete this post?');
+    if (confirm) {
+      axios.delete(`http://localhost:3000/posts/${id}`)
+        .then((res) => {
+          console.log('Deleted post:', res.data);
+          setPosts(posts.filter(post => post.id !== id));
+        })
+        .catch((err) => console.error('Error deleting post:', err));
+    }
+  };
+
   return (
     <div className="d-flex-column justify-content-center align-items-center bg-light vh-100">
       <h1>List of Posts</h1>
@@ -35,7 +47,7 @@ const PostsList = () => {
                 <td>
                   <Link to={`/post/${post.id}`} className="btn btn-sm btn-info me-2">View</Link>
                   <Link to={`/update-post/${post.id}`} className="btn btn-sm btn-primary me-2">Edit</Link>
-                  <button className="btn btn-sm btn-danger">Delete</button>
+                  <button onClick={() => handleDelete(post.id)} className="btn btn-sm btn-danger">Delete</button>
                 </td>
               </tr>
             ))}

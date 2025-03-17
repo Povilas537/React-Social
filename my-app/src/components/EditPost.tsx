@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { PostValues } from '../types/types';
 
-const UpdatePost = () => {
+const EditPost = () => {
   const [values, setValues] = useState<PostValues>({
     title: '',
     body: ''
@@ -53,4 +53,4 @@ const UpdatePost = () => {
   );
 };
 
-export default UpdatePost;
+export default EditPost;

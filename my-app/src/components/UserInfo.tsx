@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom'; // Import Link
+import { useParams, Link } from 'react-router-dom'; 
 import axios from 'axios';
 import { User, Post } from '../types/types';
 
-const Read = () => {
+const UserInfo = () => {
   const [user, setUser] = useState<User | null>(null);
   const [posts, setPosts] = useState<Post[]>([]);
   const { id } = useParams();
 
   useEffect(() => {
-    // Fetch user data
+   
     axios.get(`http://localhost:3000/users/${id}`)
       .then((res) => {
         setUser(res.data);
       })
       .catch((err) => console.error(err));
 
-    // Fetch posts for the user
+   
     axios.get(`http://localhost:3000/posts?userId=${id}`)
       .then((res) => {
         setPosts(res.data);
@@ -48,7 +48,7 @@ const Read = () => {
                 </li>
               ))}
             </ul>
-            <Link to={`/update/${id}`} className="btn btn-success">Edit</Link>
+            <Link to={`/edit-user/${id}`} className="btn btn-success">Edit</Link>
             <Link to="/" className="btn btn-primary ms-3">Back</Link>
           </>
         ) : (
@@ -59,4 +59,4 @@ const Read = () => {
   );
 };
 
-export default Read;
+export default UserInfo;

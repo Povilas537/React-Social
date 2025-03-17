@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Post } from '../types/types';
+import CommentComponent from './Comment';
 
-const PostDetail = () => {
+const PostDetails = () => {
   const [post, setPost] = useState<Post | null>(null);
   const { id } = useParams();
 
   useEffect(() => {
     console.log(`Fetching post with id: ${id}`); // Log the id
-    axios.get(`http://localhost:3000/posts?id=${id}`)
+    axios.get(`http://localhost:3000/posts/${id}`)
       .then((res) => {
         console.log('Post data fetched:', res.data); // Log the response data
         setPost(res.data);
@@ -29,6 +30,7 @@ const PostDetail = () => {
             <div className="mb-3">
               <p>{post.body}</p>
             </div>
+            <CommentComponent postId={post.id} />
             <Link to="/posts" className="btn btn-primary">Back</Link>
           </>
         ) : (
@@ -39,4 +41,4 @@ const PostDetail = () => {
   );
 };
 
-export default PostDetail;
+export default PostDetails;

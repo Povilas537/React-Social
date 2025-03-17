@@ -202,6 +202,127 @@
       "body": "This is the second post by Clementina DuBuque.",
       "userId": "10"
     }
-
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 1,
+      "body": "This is a comment on post 1 by user 1."
+    },
+    {
+      "id": 2,
+      "postId": 2,
+      "userId": 1,
+      "body": "This is a comment on post 2 by user 1."
+    },
+    {
+      "id": 3,
+      "postId": 3,
+      "userId": 2,
+      "body": "This is a comment on post 3 by user 2."
+    },
+    {
+      "id": 4,
+      "postId": 4,
+      "userId": 2,
+      "body": "This is a comment on post 4 by user 2."
+    },
+    {
+      "id": 5,
+      "postId": 5,
+      "userId": 3,
+      "body": "This is a comment on post 5 by user 3."
+    },
+    {
+      "id": 6,
+      "postId": 6,
+      "userId": 3,
+      "body": "This is a comment on post 6 by user 3."
+    },
+    {
+      "id": 7,
+      "postId": 7,
+      "userId": 4,
+      "body": "This is a comment on post 7 by user 4."
+    },
+    {
+      "id": 8,
+      "postId": 8,
+      "userId": 4,
+      "body": "This is a comment on post 8 by user 4."
+    },
+    {
+      "id": 9,
+      "postId": 9,
+      "userId": 5,
+      "body": "This is a comment on post 9 by user 5."
+    },
+    {
+      "id": 10,
+      "postId": 10,
+      "userId": 5,
+      "body": "This is a comment on post 10 by user 5."
+    },
+    {
+      "id": 11,
+      "postId": 11,
+      "userId": 6,
+      "body": "This is a comment on post 11 by user 6."
+    },
+    {
+      "id": 12,
+      "postId": 12,
+      "userId": 6,
+      "body": "This is a comment on post 12 by user 6."
+    },
+    {
+      "id": 13,
+      "postId": 13,
+      "userId": 7,
+      "body": "This is a comment on post 13 by user 7."
+    },
+    {
+      "id": 14,
+      "postId": 14,
+      "userId": 7,
+      "body": "This is a comment on post 14 by user 7."
+    },
+    {
+      "id": 15,
+      "postId": 15,
+      "userId": 8,
+      "body": "This is a comment on post 15 by user 8."
+    },
+    {
+      "id": 16,
+      "postId": 16,
+      "userId": 8,
+      "body": "This is a comment on post 16 by user 8."
+    },
+    {
+      "id": 17,
+      "postId": 17,
+      "userId": 9,
+      "body": "This is a comment on post 17 by user 9."
+    },
+    {
+      "id": 18,
+      "postId": 18,
+      "userId": 9,
+      "body": "This is a comment on post 18 by user 9."
+    },
+    {
+      "id": 19,
+      "postId": 19,
+      "userId": 10,
+      "body": "This is a comment on post 19 by user 10."
+    },
+    {
+      "id": 20,
+      "postId": 20,
+      "userId": 10,
+      "body": "This is a comment on post 20 by user 10."
+    }
   ]
 }

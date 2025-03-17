@@ -3,14 +3,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { User } from '../types/types';
 
-const Home = () => {
+const Users = () => {
   const [data, setData] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     axios.get('http://localhost:3000/users')
       .then((res) => {
-        console.log('Fetched data:', res.data); // Log the fetched data
+        console.log('Fetched data:', res.data); 
         setData(res.data);
       })
       .catch((err) => {
@@ -57,8 +57,8 @@ const Home = () => {
                 <td>{d.email}</td>
                 <td>{d.phone}</td>
                 <td className="d-flex">
-                  <Link to={`/read/${d.id}`} className="btn btn-sm btn-info">More</Link>
-                  <Link to={`/update/${d.id}`} className="btn btn-sm btn-primary">Edit</Link>
+                  <Link to={`/user-info/${d.id}`} className="btn btn-sm btn-info me-2">More</Link>
+                  <Link to={`/edit-user/${d.id}`} className="btn btn-sm btn-primary me-2">Edit</Link>
                   <button onClick={() => handleDelete(d.id)} className="btn btn-sm btn-danger">Delete</button>
                 </td>
               </tr>
@@ -70,4 +70,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Users;
